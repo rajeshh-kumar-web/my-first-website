@@ -1,58 +1,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style> body {
-transition: background 0.5s ease;
-}
-    body {
-        background-color: #f4f7f6; /* Halka grey professional background */
-        font-family: 'Segoe UI' , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    nav a:hover {
-        background-color: #555; /* Mouse le jaane par menu link ka rang badlega */
-        border-radius: 5px;
-    }
+<style>
+    body { transition: background 0.5s ease; background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
+    nav a:hover { background-color: #555; border-radius: 5px; }
     @media (max-width: 600px) {
-  #clock {
-    font-size: 30px; /* Mobile par ghari thodi choti dikhe */
-  }
-  nav a {
-    display: block; /* Menu links ek ke niche ek aa jayenge */
-    margin: 5px 0;
-  }
-  button {
-    width: 90%; /* Button mobile ki poori width lega */
-  }
-}
+        #clock { font-size: 30px; }
+        nav a { display: block; margin: 5px 0; }
+        button { width: 90%; }
+    }
 </style>
+
 <nav style="background-color: #333; padding: 15px; text-align: center;">
     <a href="index.html" style="color: white; margin: 10px; text-decoration: none;">Home</a>
     <a href="about.html" style="color: white; margin: 10px; text-decoration: none;">About</a>
-    <a href="contact.html" style="color: white; margin: 10px; text-decoration: none;">Contact</a></nav>
-<button onclick="badloDesign()" style="padding: 10px; margin: 20px; cursor: pointer; border-radius: 5px;">
-    🌙 Dark/Light Mode
-</button>
+    <a href="contact.html" style="color: white; margin: 10px; text-decoration: none;">Contact</a>
+</nav>
+
+<button onclick="badloDesign()" style="padding: 10px; margin: 20px; cursor: pointer; border-radius: 5px;">🌙 Dark/Light Mode</button>
+
 <div style="text-align: center; margin-top: 30px;">
     <h2 style="color: #666;">Current Time</h2>
+    <div id="clock" style="font-size: 50px; font-weight: bold;">00:00:00</div>
+</div>
 
-<div id="clock" style="font-size: 50px; font-weight: bold;">
-    00:00:00
+<h1 style="text-align: center;">Welcome to My website</h1>
+<p style="text-align: center;">Yeh mera Home Page hai.</p>
 
-</div>
-</div>
-<footer style="text-align: center; padding: 20px;">
-    <p>&copy; <span id="year"></span> Rajesh Kumar | All Rights Reserved</p>
-</footer>
-<div style="position: fixed; bottom: 20px !important; right: 20px; z-index: 1000;">
-    <a href="https://wa.me" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="60" height="60" alt="WhatsApp Chat" style="box-shadow: 2px 2px 10px rgba(0,0,0,0.3); border-radius: 50%;">
-    </a>
-</div>
-<h1 style="text-align: cetner;">Welcome to My website</h1>
-    <p style="text-align: center;">Yeh mera Home Page hai.</p>
 <marquee style="background-color: #333; color: yellow; padding: 10px; font-weight: bold; font-family: Arial;">
     Namaste! Mera naam RAJESH KUMAR hai. Dehradun se meri pahli professional website mein aapka swagat hai 🚀
 </marquee>
+
+<!-- Footer hamesha sabse niche rahega -->
+<footer style="text-align: center; padding: 20px; background-color: #333; color: white; margin-top: 50px;">
+    <p>&copy; <span id="year"></span> Rajesh Kumar | All Rights Reserved</p>
+</footer>
+
+<!-- Floating WhatsApp Button (Ab ye sabse niche aur sahi jagah hai) -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+    <a href="https://wa.me/919911998338" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="60" height="60" alt="WhatsApp Chat" style="box-shadow: 2px 2px 10px rgba(0,0,0,0.3); border-radius: 50%;">
+    </a>
+</div>
+
 <script>
     function badloDesign() {
         var body = document.body;
@@ -67,28 +55,17 @@ transition: background 0.5s ease;
             btn.innerHTML = "☀️ Light Mode";
         }
     }
-    // 2. Ghari ka Function
     function chalaoGhari() {
         var abhi = new Date();
         var h = abhi.getHours();
         var m = abhi.getMinutes();
         var s = abhi.getSeconds();
-        
         if (h < 10) h = "0" + h;
         if (m < 10) m = "0" + m;
         if (s < 10) s = "0" + s;
-        
-        var samay = h + ":" + m + ":" + s;
-        document.getElementById("clock").innerHTML = samay;
+        document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
     }
-
-    // 3. Footer ka Year (Zaroori Line)
     document.getElementById("year").innerHTML = new Date().getFullYear();
-
-    // 4. Ghari shuru karne wali lines
     setInterval(chalaoGhari, 1000);
     chalaoGhari();
-    
 </script>
-
-
