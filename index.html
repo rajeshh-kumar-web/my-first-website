@@ -10,6 +10,28 @@
         .section-title { text-align: center; padding: 20px; color: #333; border-bottom: 3px solid #1a2a6c; width: fit-content; margin: 20px auto; }
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
         .box { border-radius: 10px; width: 300px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: white; }
+    .box {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none !important; /* Purana border hatayein */
+    background: #ffffff;
+}
+
+.box:hover {
+    transform: translateY(-10px); /* Mouse le jane par dabba upar uthega */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Category Buttons Style */
+.cat-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid #1a2a6c;
+    border-radius: 20px;
+    color: #1a2a6c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
     </style>
 </head>
 <body>
@@ -185,3 +207,4 @@ chalaoGhari();
 
 </body>
 </html>
+
