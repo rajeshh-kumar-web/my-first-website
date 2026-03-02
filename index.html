@@ -1,209 +1,132 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajesh Mega Portal - Jobs & Fashion</title>
+    <title>RD Mega Portal | UK Jobs, Admissions & Deals</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
-        body { transition: 0.5s; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; }
-        nav { background: #1a2a6c; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; }
-        nav a { color: white; margin: 15px; text-decoration: none; font-weight: bold; }
-        .section-title { text-align: center; padding: 20px; color: #333; border-bottom: 3px solid #1a2a6c; width: fit-content; margin: 20px auto; }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
-        .box { border-radius: 10px; width: 300px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: white; }
-    .box {
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: none !important; /* Purana border hatayein */
-    background: #ffffff;
-}
-
-.box:hover {
-    transform: translateY(-10px); /* Mouse le jane par dabba upar uthega */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* Category Buttons Style */
-.cat-btn {
-    padding: 10px 20px;
-    background: white;
-    border: 1px solid #1a2a6c;
-    border-radius: 20px;
-    color: #1a2a6c;
-    font-weight: bold;
-    cursor: pointer;
-}
-
+        :root { --primary: #1a2a6c; --accent: #ff9900; --success: #2ecc71; --medical: #e74c3c; --bg: #f4f7f6; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: var(--bg); scroll-behavior: smooth; }
+        nav { background: var(--primary); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav a { color: white; margin: 0 8px; text-decoration: none; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+        .hero { background: linear-gradient(45deg, #1a2a6c, #b21f1f); height: 160px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10px; }
+        .section-title { text-align: center; margin: 30px auto 15px; font-size: 22px; color: var(--primary); font-weight: 800; border-bottom: 4px solid var(--accent); width: fit-content; padding-bottom: 5px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 10px; max-width: 1200px; margin: 0 auto; }
+        .box { width: 100%; max-width: 340px; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 5px solid var(--primary); }
+        .card-content { padding: 15px; }
+        .link-list { list-style: none; padding: 0; margin: 0; }
+        .link-list li { padding: 10px 0; border-bottom: 1px dotted #ccc; }
+        .link-list a { text-decoration: none; color: #333; font-weight: 600; display: flex; justify-content: space-between; font-size: 14px; }
+        .hot-tag { background: red; color: white; font-size: 9px; padding: 2px 6px; border-radius: 4px; animation: blink 1s infinite; }
+        @keyframes blink { 0% {opacity: 1;} 50% {opacity: 0.5;} 100% {opacity: 1;} }
+        .btn-amazon { background: #FF9900; color: #000; padding: 10px; text-decoration: none; border-radius: 6px; display: block; text-align: center; font-weight: bold; margin-top: 10px; font-size: 13px; border: 1px solid #cc7a00; }
+        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 20px; right: 20px; background: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 2000; text-decoration: none; }
     </style>
 </head>
 <body>
-    <div style="background-color: #000; color: #00ff00; padding: 5px; text-align: right; font-family: monospace; font-size: 14px; padding-right: 20px;">
-    Live Time: <span id="clock">00:00:00</span>
-</div>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#jobs">Latest Jobs</a>
-<a href="#fashion">Fashion Deals</a>
-    <button onclick="badloDesign()" style="cursor:pointer; border-radius:5px; padding:5px;">🌙 Mode</button>
+    <a href="#admission">Admissions</a>
+    <a href="#jobs">Jobs & Admit Cards</a>
+    <a href="#books">Study Material</a>
+    <a href="#fashion">Fashion</a>
 </nav>
-   <marquee style="background: #e74c3c; color: white; padding: 10px; font-weight: bold;">
-    🔥 NEW: SSC GD Constable 2026 Admit Card Out!  
-</marquee>
 
-<h2 id="jobs" class="section-title">SARKARI JOBS & ADMIT CARDS 💼</h2>
+<div class="hero">
+    <h1>RD Mega Portal</h1>
+    <p>Uttarakhand's All-in-One Hub</p>
+</div>
 
+<!-- 🎓 1. ADMISSION SECTION -->
+<h2 id="admission" class="section-title">Admissions 🎓</h2>
 <div class="container">
-    <!-- 1. Jobs Box -->
-    <div class="box" style="border-top: 5px solid #e74c3c; padding: 15px;">
-        <h3>LATEST JOBS 💼</h3>
-        <ul style="line-height: 2; font-family: Arial; padding-left: 20px;">
-            <li><a href="https://ukpsc.net.in" target="_blank" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">UKPSC Police Bharti 2026</a></li>
-            <li><a href="https://ssc.gov.in" target="_blank" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">SSC GD Constable Form</a></li>
-        </ul>
+    <div class="box">
+        <div class="card-content">
+            <h3>School Entrance Only</h3>
+            <ul class="link-list">
+                <li><a href="https://aissee.nta.nic.in" target="_blank">Sainik School Entrance <span class="hot-tag">LIVE</span></a></li>
+                <li><a href="https://navodaya.gov.in" target="_blank">JNV Class 6th/9th Form</a></li>
+                <li><a href="#" target="_blank">RIMS Dehradun Exam</a></li>
+            </ul>
+        </div>
     </div>
-
-    <!-- 2. Admit Card Box -->
-    <div class="box" style="border-top: 5px solid #2ecc71; padding: 15px;">
-        <h3 id="admit" style="margin: 0; color: #333;">ADMIT CARD 🎟️</h3>
-        <ul style="line-height: 2; font-family: Arial; padding-left: 20px;">
-            <li><a href="https://ukpsc.net.in" target="_blank" style="text-decoration: none; color: #1a2a6c; font-weight: bold;">UKPSC Police Admit Card</a></li>
-            <li><a href="https://ssc.gov.in" target="_blank" style="text-decoration: none; color: #1a2a6c; font-weight: bold;">SSC CGL Exam City Details</a></li>
-        </ul>
-    </div>
-
-    <!-- 3. School Admission Box -->
-    <div class="box" style="border-top: 5px solid #3498db; padding: 15px;">
-        <h3 style="margin: 0; color: #333;">SCHOOL & ADMISSIONS 🎓</h3>
-        <ul style="line-height: 2; font-family: Arial; padding-left: 20px;">
-            <li><a href="https://navodaya.gov.in" target="_blank" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">Navodaya Class 6/9 Admission</a></li>
-            <li><a href="https://aissee.nta.nic.in" target="_blank" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">Sainik School Entrance 2026</a></li>
-        </ul>
-       <hr style="border: 0.5px solid #ddd; margin: 10px 0;">
-<p style="font-size: 14px; font-weight: bold; color: #d35400;">📚 Recommended Study Material:</p>
-
-<!-- Navodaya Book Link -->
-<a href="https://amzn.to/4clLLS6" target="_blank" 
-   style="background: #f39c12; color: white; padding: 8px; text-decoration: none; border-radius: 5px; display: block; font-size: 13px; text-align: center; margin-bottom: 8px; font-weight: bold;">
-   📖 Best Navodaya Guide Book (Buy Now)
-</a>
-
-<!-- Sainik School Book Link -->
-<a href="https://amzn.to/3OEUghf" target="_blank" 
-   style="background: #2980b9; color: white; padding: 8px; text-decoration: none; border-radius: 5px; display: block; font-size: 13px; text-align: center; font-weight: bold;">
-   📖 Top Sainik School Practice Set
-</a>
+    <div class="box" style="border-color: var(--medical);">
+        <div class="card-content">
+            <h3>Courses After 12th & Colleges</h3>
+            <ul class="link-list">
+                <li><a href="#" target="_blank">Engineering (JEE) & Medical (NEET)</a></li>
+                <li><a href="#" target="_blank">CUET Central Universities</a></li>
+                <li><a href="#" target="_blank">Best Colleges in Uttarakhand</a></li>
+                <li><a href="#" target="_blank">B.Sc Agriculture (Pantnagar)</a></li>
+            </ul>
+        </div>
     </div>
 </div>
 
-<marquee style="background: #ffcc00; color: #000; padding: 10px; font-weight: bold; margin-top: 20px;">
-    🔥 NEW: Uttarakhand Police Bharti Exam Date Announced! | 🔥 SSC GD 2026 Online Form Link Active Now! 🚀
-</marquee>
-<!-- 3. FASHION DEALS (Amazon/Meesho) -->
-<h2 id="fashion" class="section-title">TODAY'S FASHION DEALS 👕</h2>
+<!-- 💼 2. JOBS & ADMIT CARDS -->
+<h2 id="jobs" class="section-title">Jobs & Admit Cards 💼</h2>
 <div class="container">
-    
-    <!-- Item 1: Shoes -->
-    <div class="box" style="text-align: center; padding-bottom: 20px;">
-        <div style="position: relative;">
-            <span style="position: absolute; top: 10px; left: 10px; background: red; color: white; padding: 5px 10px; font-size: 12px; font-weight: bold; border-radius: 5px; z-index: 10;">50% OFF</span>
-            <img src="https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UL320_.jpg" width="100%" alt="Shoes">
-        </div>
-        <div style="padding: 15px;">
-            <h4 style="margin: 0;">Branded Sports Shoes</h4>
-            <p style="color: #e67e22; font-weight: bold;">₹499 <span style="text-decoration: line-through; color: #999; font-size: 12px;">₹1,999</span></p>
-            <div style="color: #ff9900;">⭐⭐⭐⭐⭐
-</div>
-<a href="https://amzn.to/4rJ37Nx" 
-   target="_blank" 
-   style="background: #ff9900; color: black; padding: 12px; text-decoration: none; border-radius: 5px; display: block; font-weight: bold; margin-bottom: 10px; text-align: center;">
-   🛒 Buy on Amazon
-</a>
-            <a href="https://wa.me/919911998338" target="_blank"
-            style="background: linear-gradient(135deg, #25d366, #128c7e); color: white; padding: 12px 20px; text-decoration: none; border-radius: 30px; display: block; font-weight: bold; font-family: Arial; margin-top: 15px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); text-align: center; font-size: 16px; border: 2px solid #ffffff;">
-   <span style="font-size: 20px; vertical-align: middle; margin-right: 8px;">💬</span> 
-   Order on WhatsApp
-</a>
+    <div class="box" style="border-color: var(--success);">
+        <div class="card-content">
+            <h3>Latest Govt Jobs</h3>
+            <ul class="link-list">
+                <li><a href="https://psc.uk.gov.in" target="_blank">UKPSC (Gazetted)</a></li>
+                <li><a href="https://sssc.uk.gov.in" target="_blank">UKSSSC (Group C)</a></li>
+                <li><a href="#" target="_blank">UK Police Bharti 2026</a></li>
+                <li><a href="https://ssc.gov.in" target="_blank">SSC Central Jobs</a></li>
+            </ul>
         </div>
     </div>
-
-    <!-- Item 2: T-Shirt -->
-    <div class="box" style="text-align: center; padding-bottom: 20px;">
-        <div style="position: relative;">
-            <span style="position: absolute; top: 10px; left: 10px; background: red; color: white; padding: 5px 10px; font-size: 12px; font-weight: bold; border-radius: 5px; z-index: 10;">70% OFF</span>
-            <img src="https://img.freepik.com/blue-t-shirt_125540-727.jpg" width="100%" alt="Puma T-Shirt">
-        </div>
-        <div style="padding: 15px;">
-            <h4 style="margin: 0;">Cotton Casual T-Shirt</h4>
-            <p style="color: #e67e22; font-weight: bold;">₹299 <span style="text-decoration: line-through; color: #999; font-size: 12px;">₹999</span></p>
-            <div style="color: #ff9900;">⭐⭐⭐⭐⭐
-</div>
-<a href="https://amzn.to/4tXHx9D" 
-   target="_blank" 
-   style="background: #ff9900; color: black; padding: 12px; text-decoration: none; border-radius: 5px; display: block; font-weight: bold; margin-bottom: 10px; text-align: center;">
-   🛒 Buy on Amazon
-</a>
-            <a href="https://wa.me/919911998338" target="_blank"
-          style="background: linear-gradient(135deg, #25d366, #128c7e); color: white; padding: 12px 20px; text-decoration: none; border-radius: 30px; display: block; font-weight: bold; font-family: Arial; margin-top: 15px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); text-align: center; font-size: 16px; border: 2px solid #ffffff;">
-   <span style="font-size: 20px; vertical-align: middle; margin-right: 8px;">💬</span> 
-   Order on WhatsApp
-</a>  
+    <div class="box" style="border-color: #f1c40f;">
+        <div class="card-content">
+            <h3>Admit Cards</h3>
+            <ul class="link-list">
+                <li><a href="#" target="_blank">SSC GD Constable <span class="hot-tag">NEW</span></a></li>
+                <li><a href="#" target="_blank">UKPSC Exam City Details</a></li>
+                <li><a href="#" target="_blank">Download Hall Tickets</a></li>
+            </ul>
         </div>
     </div>
-
-    <!-- Item 3: Watch -->
-    <div class="box" style="text-align: center; padding-bottom: 20px;">
-        <div style="position: relative;">
-            <span style="position: absolute; top: 10px; left: 10px; background: #ff9900; color: white; padding: 5px 10px; font-size: 12px; font-weight: bold; border-radius: 5px; z-index: 10;">40% OFF</span>
-            <img src="https://m.media-amazon.com/images/I/61ZjlBOp+rL._AC_UL320_.jpg" width="100%">
-        </div>
-        <div style="padding: 15px;">
-            <h4 style="margin: 0;">Luxury Smart Watch</h4>
-            <p style="color: #e67e22; font-weight: bold;">₹799 <span style="text-decoration: line-through; color: #999; font-size: 12px;">₹2,999</span></p>
-            <div style="color: #ff9900;">⭐⭐⭐⭐⭐
 </div>
-<a href="https://amzn.to/3N621fH" 
-   target="_blank" 
-   style="background: #ff9900; color: black; padding: 12px; text-decoration: none; border-radius: 5px; display: block; font-weight: bold; margin-bottom: 10px; text-align: center;">
-   🛒 Buy on Amazon
-</a>
-            <a href="https://wa.me/919911998338" target="_blank"
-           style="background: linear-gradient(135deg, #25d366, #128c7e); color: white; padding: 12px 20px; text-decoration: none; border-radius: 30px; display: block; font-weight: bold; font-family: Arial; margin-top: 15px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); text-align: center; font-size: 16px; border: 2px solid #ffffff;">
-   <span style="font-size: 20px; vertical-align: middle; margin-right: 8px;">💬</span> 
-   Order on WhatsApp 
-</a>
+
+<!-- 📚 3. STUDY MATERIAL & BOOKS (AFFILIATE) -->
+<h2 id="books" class="section-title">Study Material & Books 📚</h2>
+<div class="container">
+    <div class="box">
+        <div class="card-content">
+            <h3>Best Books (Amazon)</h3>
+            <ul class="link-list">
+                <li><a href="https://amzn.to/4b0m3QH" target="_blank">UK GK Special Book</a></li>
+                <li><a href="https://amzn.to/4b0m3QH" target="_blank">Sainik School Guide 2026</a></li>
+            </ul>
+            <a href="APNA_AMAZON_LINK" class="btn-amazon" target="_blank">Buy Study Material on Amazon</a>
         </div>
     </div>
+</div>
 
-</div> <!-- Container Band -->
+<!-- 👕 4. FASHION & TRENDING (AFFILIATE) -->
+<h2 id="fashion" class="section-title">Fashion & Deals 👕</h2>
+<div class="container">
+    <div class="box" style="border-color: #ff4486;">
+        <div class="card-content">
+            <h3>Trending Fashion</h3>
+            <p style="font-size:12px; color:gray;">Latest Deals from Amazon, Meesho & Flipkart</p>
+            <a href="https://amzn.to/4sbKilY" class="btn-amazon" target="_blank">Amazon Deals (Trending)</a>
+            <a href="MEESHO_LINK" class="btn-amazon" style="background:#ff4486; color:white; border:none;">Meesho Fashion</a>
+            <a href="FLIPKART_LINK" class="btn-amazon" style="background:#2874f0; color:white; border:none;">Flipkart Offers</a>
+        </div>
+    </div>
+</div>
 
-<marquee style="background: #ff47b6; color: white; padding: 10px; font-weight: bold; margin-top: 30px;">
-    🛍️ MEESHO SUPER SALE: Kurtas & Sarees starting @ ₹199 only! | Latest Fashion Trends 2026 🚀
+<!-- WhatsApp Support -->
+<a href="https://wa.me" class="whatsapp-float" target="_blank">
+    <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+</a>
 
-</marquee>
-<script>
-    function badloDesign() {
-        var b = document.body;
-        if (b.style.backgroundColor === "black") {
-            b.style.backgroundColor = "#f4f7f6"; b.style.color = "black";
-        } else {
-            b.style.backgroundColor = "black"; b.style.color = "white";
-        }
-    }
-    function chalaoGhari() {
-    var abhi = new Date();
-    var h = abhi.getHours();
-    var m = abhi.getMinutes();
-    var s = abhi.getSeconds();
-    
-    if (h < 10) h = "0" + h;
-    if (m < 10) m = "0" + m;
-    if (s < 10) s = "0" + s;
-    
-    document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
-}
-
-setInterval(chalaoGhari, 1000);
-chalaoGhari();
-</script>
+<footer style="background: #111; color: white; text-align: center; padding: 25px; margin-top: 50px;">
+    <p>© 2026 RD Mega Portal | Uttarakhand ❤️</p>
+</footer>
 
 </body>
 </html>
