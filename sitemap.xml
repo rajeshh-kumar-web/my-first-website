@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+<urlset xmlns="http://sitemap.org">
   <url>
     <loc>https://rkd-digital-web.github.io/rk-digital/</loc>
     <lastmod>2026-03-08</lastmod>
@@ -11,5 +11,6 @@
     <priority>0.8</priority>
   </url>
 </urlset>
+
 
 
